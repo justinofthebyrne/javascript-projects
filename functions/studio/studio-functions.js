@@ -9,6 +9,20 @@
 // 5. Use console.log(reverseCharacters(myVariableName)); to call the function and verify that it correctly reverses the characters in the string.
 // 6. Optional: Use method chaining to reduce the lines of code within the function.
 
+function reversedCharacters(str) {
+    
+    if (typeof str === String) {
+        return str.split('').reverse().join('');
+    } else {
+        let reversed = str.toString().split('').reverse().join('')
+        Number(reversed)
+        return reversed;
+    }
+}
+let myVariableName = 1234;
+console.log(reversedCharacters(myVariableName));
+
+
 // Part Two: Reverse Digits
 
 // 1. Add an if statement to reverseCharacters to check the typeof the parameter.
@@ -30,12 +44,33 @@ let arrayTest1 = ['apple', 'potato', 'Capitalized Words'];
 let arrayTest2 = [123, 8897, 42, 1168, 8675309];
 let arrayTest3 = ['hello', 'world', 123, 'orange'];
 
+function reversedArr (arr) {
+    let emptyArray = [];
+    for (let i = 0; i < arr.length; i++) {
+        let unreversedR = reversedCharacters (arr[i]); 
+        emptyArray.push(unreversedR)
+        
+    }
+        return emptyArray.reverse()
+}
+    console.log(reversedArr(arrayTest3)); 
+
 // Bonus Missions
 
 // 1. Have a clear, descriptive name like funPhrase.
 // 2. Retrieve only the last character from strings with lengths of 3 or less.
 // 3. Retrieve only the first 3 characters from strings with lengths larger than 3.
 // 4. Use a template literal to return the phrase We put the '___' in '___'. Fill the first blank with the modified string, and fill the second blank with the original string.
+
+function funPhrase (str) {
+    if (str.length <= 3) {
+        return str.charAt(str.length -1);
+    } else {
+        shortString = str.slice(0, 3)
+        console.log(`We put the ${shortString} in ${str}`); 
+    }   
+}
+funPhrase('caterpillar');
 
 // Test Function
 
@@ -44,8 +79,21 @@ let arrayTest3 = ['hello', 'world', 123, 'orange'];
 
 // Area of rectangle equal to length x width
 
+
 // 1. Define a function with the required parameters to calculate the area of a rectangle.
 // 2. The function should return the area, NOT print it.
 // 3. Call your area function by passing in two arguments - the length and width.
 // 4. If only one argument is passed to the function, then the shape is a square. Modify your code to deal with this case.
 // 5. Use a template literal to print, “The area is ____ cm^2.”
+
+function equalRectangle (length, width) {
+    if (typeof width === 'undefined') {
+        width = length; 
+    } else {
+        width = width; 
+    }
+    console.log(`The area is ${length * width} cm^2`); {
+    }
+
+}
+equalRectangle(2, 4);
