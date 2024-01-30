@@ -6,5 +6,20 @@ let nums2 = [-2, 0, -10, -44, 5, 3, 0, 3];
 let nums3 = [200, 5, 4, 10, 8, 5, -3.3, 4.4, 0];
 
 //Using one of the test arrays as the argument, call your function inside the console.log statement below.
+function findMinimumValue (arr) {
+    let lowestNumber = [arr[0]]; 
+    for (i = 1; i < arr.length; i++)
+    
+    if (arr[i] < lowestNumber) {
+        if (arr[i] < lowestNumber) {
+            lowestNumber = arr[i]; 
+        }
+    }
+return lowestNumber;
+    }
+
+
+
+
 
 console.log(/* your code here */);
